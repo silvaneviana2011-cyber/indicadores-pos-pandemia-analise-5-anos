@@ -100,29 +100,23 @@ por município.
 **2024**  
 Análise geográfica de causas de morte por município.
 
+## ⧉ DATASET FINAL
+
+O dataset final utilizado na análise temporal apresenta:
+
+**208 observações · 4 variáveis · 2020-01-06 → 2023-12-25**
+
 ### ⧉ Variáveis principais
 
-O dataset final utilizado na análise temporal integra:
-
-```text
-data_semana
-excesso_cumulativo_por_milhao
-mortes_covid
-cobertura_vacinal
+`data_semana` · `excesso_cumulativo_por_milhao` · `mortes_covid` · `cobertura_vacinal`
 
 ---
 
 ## ⇢ O TRATAMENTO
 
-Antes da análise, os diferentes conjuntos de dados passaram por um
-processo de preparação e transformação em Python.
-
-O objetivo foi garantir que os dados utilizados nas análises fossem
-consistentes, comparáveis e adequados à construção das visualizações.
+Antes da análise, os diferentes conjuntos de dados passaram por um processo de preparação e transformação em Python.
 
 ### ⇢ Principais etapas
-
-### ⇢ Do dado à análise
 
 **⧉ Dados originais**  
 ↓  
@@ -142,117 +136,50 @@ consistentes, comparáveis e adequados à construção das visualizações.
 
 ## ∿ A ANÁLISE
 
-Com os dados preparados, foi realizada uma análise exploratória e
-estatística dos principais indicadores.
+Foram utilizadas técnicas de estatística descritiva e análise exploratória para compreender a distribuição 
+e evolução dos indicadores.
 
-O objetivo foi compreender a distribuição dos dados, a sua evolução
-ao longo do tempo e as relações observadas entre diferentes
-variáveis.
-
-### ∿ Estatística descritiva
-
-Foram calculados diferentes indicadores estatísticos, incluindo:
-
-- média;
-- mediana;
-- mínimo e máximo;
-- desvio-padrão;
-- quartis;
-- intervalo interquartil (IQR);
-- assimetria;
-- coeficiente de variação.
-
+**Medidas utilizadas:**  
+`Média` · `Mediana` · `Mínimo` · `Máximo` · `Desvio-padrão` · `Quartis` · `IQR` · `Assimetria` · `Coeficiente de variação`
 
 ### ⌁ Evolução temporal
 
-A análise temporal permitiu observar a evolução semanal de:
-
-- excesso de mortalidade;
-- mortes por COVID-19;
-- cobertura vacinal.
-
-A representação gráfica dos indicadores permite identificar períodos
-de alteração, crescimento, redução e estabilização.
+Análise da evolução do excesso de mortalidade, mortes por COVID-19 e cobertura vacinal.
 
 ### ⟷ Relações entre indicadores
 
-Foi também analisada a correlação entre os principais indicadores.
-
-A matriz de correlação permite observar associações estatísticas entre
-as variáveis analisadas.
+Foi explorada a correlação entre os principais indicadores.
 
 > **Correlação não significa causalidade.**
 
-As associações observadas devem ser interpretadas no contexto de uma
-análise observacional e não permitem, isoladamente, determinar que
-uma variável tenha provocado alterações noutra.
-Os dados têm sua própria linguagem, falam por si.
+### ∿ Causas de morte
 
-### ∿ Análise das causas de morte
-
-Os dados da PORDATA permitiram complementar a análise temporal através
-da comparação de diferentes causas de morte entre 2020 e 2024.
-
-Foram consideradas, entre outras:
-
-- doenças do aparelho circulatório;
-- tumores malignos;
-- diabetes;
-- COVID-19;
-- doenças respiratórias;
-- doenças do aparelho digestivo;
-- suicídio;
-- tuberculose;
-- SIDA.
-
-Esta análise permite observar alterações nos padrões de mortalidade
-ao longo do período estudado.
-
----
-
-## ⟷ AS RELAÇÕES
-
-Foi explorada a relação entre os principais indicadores através de
-uma matriz de correlação.
-
-**Indicadores analisados**
-
-`Excesso de mortalidade` · `Mortes por COVID-19` · `Cobertura vacinal`
-
-Os resultados são interpretados como associações observadas nos dados,
-podendo contribuir para futuras investigações.
+Os dados da PORDATA permitiram comparar diferentes causas de morte entre **2020 e 2024**.
 
 ---
 
 ## ⌖ O TERRITÓRIO
 
-A componente geográfica foi desenvolvida com **GeoPandas** e **Folium**,
-permitindo representar indicadores por município.
+A componente geográfica foi desenvolvida com **GeoPandas** e **Folium**.
 
 **278 municípios do Continente**
 
-→ Casos de COVID-19  
-→ Causas de morte — 2024
+`Casos de COVID-19` · `Causas de morte — 2024`
 
 ---
 
 ## ▦ A VISUALIZAÇÃO
 
-O projeto reúne os resultados num **dashboard interativo desenvolvido
-em Python, Dash e Plotly**.
+Os resultados foram integrados num **dashboard interativo desenvolvido em Python, Dash e Plotly**.
 
-Inclui:
-
-`Evolução temporal` · `Vacinação` · `Mortalidade` · `Causas de morte`
-· `Correlação` · `Mapas`
+`Evolução temporal` · `Vacinação` · `Mortalidade` · `Causas de morte` · `Correlação` · `Mapas`
 
 ---
 
 ## ◇ RESULTADOS
 
-A análise permite observar alterações nos indicadores de mortalidade
-ao longo do período estudado e identificar padrões que merecem
-investigação adicional.
+A análise permite observar alterações nos indicadores de mortalidade ao longo do período estudado e 
+identificar padrões que merecem investigação adicional.
 
 > **Os dados mostram padrões. A investigação procura compreender as razões.**
 
@@ -260,8 +187,52 @@ investigação adicional.
 
 ## ⟐ REFLEXÃO FINAL
 
-Os resultados são de natureza observacional, o trabalho não tem como objetivo afirmar
-nenhuma causa além do que os dados já o dizem. 
-O projeto procura identificar sinais, padrões e questões que possam
-orientar análises futuras.
+Os resultados são de natureza observacional. O trabalho não tem como objetivo estabelecer relações causais além do que 
+os dados permitem observar.
+O projeto procura identificar sinais, padrões e questões que possam orientar análises futuras.
 
+---
+
+## ⌘ TECNOLOGIAS
+
+`Python` · `Pandas` · `NumPy` · `Matplotlib` · `Plotly` · `GeoPandas` · `Folium` · `Dash`
+
+### ⌘ Desenvolvimento
+
+`Python` · `Jupyter / Spyder`
+
+### ⌘ Visualização
+
+`Plotly` · `Matplotlib` · `Folium` · `Dash`
+
+### ⌘ Análise geográfica
+
+`GeoPandas` · `CAOP 2025`
+
+---
+
+## § FONTES
+
+- **Our World in Data** — dados de excesso de mortalidade e COVID-19  
+  https://ourworldindata.org/explorers/covid
+
+- **PORDATA** — mortalidade por causas de morte em Portugal  
+  https://www.pordata.pt/portugal/obitos+de+residentes+em+portugal+por+algumas+causas-156
+
+- **Instituto Nacional de Estatística (INE)** — estatísticas oficiais de mortalidade  
+  https://www.ine.pt/
+
+- **Direção-Geral do Território (DGT)** — CAOP 2025  
+  https://www.dgterritorio.gov.pt/carta-administrativa-oficial-de-portugal-caop-2025
+
+  ---
+
+**◈ Projeto desenvolvido em Python · Portugal**
+---
+
+<p align="left">
+  <sub>
+    No âmbito da UFCD 10809 — Visualização de Dados em Python<br>
+    Prof. Albano Afonso · ETacademy
+  </sub>
+</p>
