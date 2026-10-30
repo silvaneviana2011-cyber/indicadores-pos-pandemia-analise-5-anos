@@ -17,7 +17,7 @@ A análise integra diferentes fontes de dados e utiliza técnicas de
 tratamento, análise estatística, visualização e geoprocessamento para
 explorar a evolução desses indicadores.
 
-### 🎯 Pergunta de investigação
+###  Pergunta de investigação
 
 > **Após cinco anos do início da pandemia, que alterações podem ser
 > observadas nos principais indicadores de saúde e mortalidade em Portugal?**
