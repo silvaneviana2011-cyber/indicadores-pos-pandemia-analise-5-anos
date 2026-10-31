@@ -217,6 +217,12 @@ O projeto procura identificar sinais, padrões e questões que possam orientar a
 
 ---
 
+## 🌐 Dashboard Interativo
+
+<a href="https://indicadores-pos-pandemia-analise-5-anos.onrender.com" target="_blank" rel="noopener noreferrer">
+    🚀 Abrir Dashboard Interativo
+</a>
+
 ---
 
 <p align="left">
