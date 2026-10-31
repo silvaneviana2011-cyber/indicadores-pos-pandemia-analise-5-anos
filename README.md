@@ -7,211 +7,201 @@
 
 ---
 
-## 🔬 Sobre o projeto
+## 🔬 SOBRE O PROJETO
 
-Cinco anos após o início da pandemia, este projeto procura observar
-**o que aconteceu com alguns dos principais indicadores de saúde e
-mortalidade em Portugal.**
+Cinco anos após o início da pandemia, este projeto procura compreender o que aconteceu com alguns dos principais indicadores de saúde e mortalidade em Portugal.
 
-A análise integra diferentes fontes de dados e utiliza técnicas de
-tratamento, análise estatística, visualização e geoprocessamento para
-explorar a evolução desses indicadores.
+Através da integração de diferentes fontes de dados públicos, são utilizadas técnicas de tratamento, análise estatística, visualização e geoprocessamento para explorar a evolução desses indicadores.
 
-###  Pergunta de investigação
+### Pergunta de investigação
 
-> **Após cinco anos do início da pandemia, que alterações podem ser
-> observadas nos principais indicadores de saúde e mortalidade em Portugal?**
+> **Após cinco anos do início da pandemia, que alterações podem ser observadas nos principais indicadores de saúde e mortalidade em Portugal?**
+
+### Objetivos
+
+- Analisar a evolução do excesso de mortalidade;
+- Observar a evolução das mortes por COVID-19;
+- Avaliar a evolução da cobertura vacinal;
+- Comparar as principais causas de morte;
+- Explorar associações entre indicadores;
+- Identificar diferenças na distribuição geográfica dos dados.
 
 ---
 
-## ◈ O QUE ESTE PROJETO PROCURA?
+## 1. OS DADOS
 
-### ◈ Questão central
+A análise foi construída a partir da integração de diferentes fontes de dados públicos, permitindo observar o período estudado através de várias dimensões.
 
-> **Após cinco anos do início da pandemia, que alterações podem ser
-> observadas nos principais indicadores de saúde e mortalidade em Portugal?**
-
-### ◈ Objetivo
-
-Analisar a evolução de diferentes indicadores de saúde e mortalidade
-em Portugal no período pós-pandemia, procurando identificar padrões,
-alterações e associações que possam contribuir para futuras
-investigações.
-
-### ◈ O que será observado?
-
-- ⌁ Evolução do excesso de mortalidade;
-- ⌁ Evolução das mortes por COVID-19;
-- ⌁ Evolução da cobertura vacinal;
-- ⌁ Alterações nas principais causas de morte;
-- ⌁ Indicadores relacionados com Saúde Mental;
-- ⟷ Associações entre os principais indicadores;
-- ⌖ Diferenças entre municípios;
-- ▦ Visualização integrada dos resultados.
-
-> **Observar → analisar → questionar → investigar.**
->
-> ⧉ OS DADOS
-      ↓
-⇢ O TRATAMENTO
-      ↓
-∿ A ANÁLISE
-      ↓
-⟷ AS RELAÇÕES
-      ↓
-⌖ O TERRITÓRIO
-      ↓
-▦ A VISUALIZAÇÃO
-      ↓
-◇ OS RESULTADOS
-      ↓
-⟐ A REFLEXÃO FINAL
->
-> ---
-
-## ⧉ OS DADOS
-
-A análise foi construída a partir da integração de diferentes fontes
-de dados públicos, permitindo observar o período pós-pandemia a partir
-de várias dimensões.
-
-### ⧉ Principais fontes
+### Principais fontes
 
 | Fonte | Informação utilizada |
 |---|---|
-| **Our World in Data** | Excesso de mortalidade e cobertura vacinal |
+| **Our World in Data** | Excesso de mortalidade, mortes por COVID-19 e vacinação |
 | **PORDATA** | Mortalidade por diferentes causas |
 | **INE** | Informação estatística complementar |
-| **CAOP 2025** | Informação geográfica dos municípios |
+| **CAOP 2025 — DGT** | Informação geográfica dos municípios |
 
-### ⌁ Períodos analisados
 
-**2020–2023**  
-Evolução semanal do excesso de mortalidade, mortes por COVID-19 e
-cobertura vacinal.
 
-**2020–2024**  
-Evolução das principais causas de morte através dos dados da PORDATA.
+### Períodos analisados
 
-**2020**  
-**26 de outubro de 2020** — análise geográfica dos casos de COVID-19
-por município.
+- **2020–2023:** evolução semanal do excesso de mortalidade, mortes por COVID-19 e cobertura vacinal.
+- **2020–2024:** comparação das principais causas de morte.
+- **2020:** análise geográfica dos casos de COVID-19 por município.
+- **2024:** análise geográfica das causas de morte.
 
-**2024**  
-Análise geográfica de causas de morte por município.
 
-## ⧉ DATASET FINAL
+### Dataset final
 
-O dataset final utilizado na análise temporal apresenta:
+O conjunto de dados utilizado na análise temporal apresenta:
 
-**208 observações · 4 variáveis · 2020-01-06 → 2023-12-25**
+**208 observações · 4 variáveis**
 
-### ⧉ Variáveis principais
+Período: `06/01/2020 – 25/12/2023`
+
+Variáveis principais:
 
 `data_semana` · `excesso_cumulativo_por_milhao` · `mortes_covid` · `cobertura_vacinal`
 
+
+
+
+## 2. TRATAMENTO DOS DADOS
+
+<h3 align="left">TRATAMENTO DE DADOS</h3>
+
+<p align="left">
+  <strong>01 · Dados originais</strong><br>
+  <sub>Recolha e integração das fontes de dados.</sub><br>
+  ↓<br>
+  <strong>02 · Inspeção e compreensão</strong><br>
+  <sub>Análise da estrutura, variáveis e qualidade dos dados.</sub><br>
+  ↓<br>
+  <strong>03 · Limpeza</strong><br>
+  <sub>Identificação e correção de inconsistências.</sub><br>
+  ↓<br>
+  <strong>04 · Transformação</strong><br>
+  <sub>Normalização, conversão e preparação das variáveis.</sub><br>
+  ↓<br>
+  <strong>05 · Integração</strong><br>
+  <sub>Consolidação dos diferentes conjuntos de dados.</sub><br>
+  ↓<br>
+  <strong>06 · Validação</strong><br>
+  <sub>Verificação da consistência e integridade dos dados.</sub><br>
+  ↓<br>
+  <strong>07 · Dados preparados para análise</strong>
+</p>
 ---
 
-## ⇢ O TRATAMENTO
+## 3. ANÁLISE ESTATÍSTICA
 
-Antes da análise, os diferentes conjuntos de dados passaram por um processo de preparação e transformação em Python.
+Foram utilizadas técnicas de estatística descritiva e análise exploratória para compreender a distribuição e a evolução dos indicadores.
 
-### ⇢ Principais etapas
+### Medidas estatísticas
 
-**⧉ Dados originais**  
-↓  
-**⌕ Inspeção e compreensão**  
-↓  
-**⟿ Limpeza**  
-↓  
-**◇ Transformação**  
-↓  
-**⟷ Integração**  
-↓  
-**✓ Validação**  
-↓  
-**◈ Dados preparados para análise**
-
----
-
-## ∿ A ANÁLISE
-
-Foram utilizadas técnicas de estatística descritiva e análise exploratória para compreender a distribuição 
-e evolução dos indicadores.
-
-**Medidas utilizadas:**  
 `Média` · `Mediana` · `Mínimo` · `Máximo` · `Desvio-padrão` · `Quartis` · `IQR` · `Assimetria` · `Coeficiente de variação`
 
-### ⌁ Evolução temporal
+### Evolução temporal
 
-Análise da evolução do excesso de mortalidade, mortes por COVID-19 e cobertura vacinal.
+Análise da evolução do excesso de mortalidade, das mortes por COVID-19 e da cobertura vacinal.
 
-### ⟷ Relações entre indicadores
+### Relações entre indicadores
 
-Foi explorada a correlação entre os principais indicadores.
+Exploração das correlações entre os principais indicadores.
 
 > **Correlação não significa causalidade.**
 
-### ∿ Causas de morte
+### Causas de morte
 
-Os dados da PORDATA permitiram comparar diferentes causas de morte entre **2020 e 2024**.
-
----
-
-## ⌖ O TERRITÓRIO
-
-A componente geográfica foi desenvolvida com **GeoPandas** e **Folium**.
-
-**278 municípios do Continente**
-
-`Casos de COVID-19` · `Causas de morte — 2024`
+Comparação das principais causas de morte em Portugal entre 2020 e 2024, com base nos dados da PORDATA.
 
 ---
 
-## ▦ A VISUALIZAÇÃO
+## 4. ANÁLISE GEOGRÁFICA
 
-Os resultados foram integrados num **dashboard interativo desenvolvido em Python, Dash e Plotly**.
+A componente geográfica foi desenvolvida com **GeoPandas** e **Folium**, utilizando a Carta Administrativa Oficial de Portugal (CAOP 2025).
 
-`Evolução temporal` · `Vacinação` · `Mortalidade` · `Causas de morte` · `Correlação` · `Mapas`
+**278 municípios de Portugal Continental**
+
+Foram desenvolvidas duas análises cartográficas:
+
+- Distribuição geográfica dos casos de COVID-19;
+- Distribuição geográfica das causas de morte em 2024.
 
 ---
 
-## ◇ RESULTADOS
+## 5. VISUALIZAÇÃO DOS RESULTADOS
 
-A análise permite observar alterações nos indicadores de mortalidade ao longo do período estudado e 
-identificar padrões que merecem investigação adicional.
+Os resultados foram integrados num **dashboard interativo desenvolvido com Python, Dash e Plotly**.
+
+O dashboard reúne diferentes perspetivas de análise:
+
+- Evolução temporal;
+- Cobertura vacinal e excesso de mortalidade;
+- Causas de morte;
+- Comparação entre períodos;
+- Variação percentual dos óbitos;
+- Análise geográfica.
+
+### Gráficos estatísticos
+
+![Evolução das mortes por COVID-19](dashboard_screenshots/01_mortes_covid.png)
+
+![Vacinação e excesso de mortalidade](dashboard_screenshots/02_vacinacao_excesso_mortalidade.png)
+
+![Causas de morte](dashboard_screenshots/03_causas_morte_2020_2024.png)
+
+![Comparação das causas de morte](dashboard_screenshots/04_comparacao_causas_2020_2024.png)
+
+![Variação percentual dos óbitos](dashboard_screenshots/05_variacao_percentual_obitos.png)
+
+### Mapas temáticos
+
+**Mapa 01 — Distribuição geográfica dos casos de COVID-19**
+
+![Mapa 01](dashboard_screenshots/mapa_01.png)
+
+**Mapa 02 — Distribuição geográfica das causas de morte em 2024**
+
+![Mapa 02](dashboard_screenshots/mapa_02.png)
+
+---
+
+## 6. RESULTADOS
+
+A análise permite observar alterações nos indicadores de mortalidade ao longo do período estudado e identificar padrões que merecem investigação adicional.
+
+A integração das dimensões estatística e geográfica permite ampliar a interpretação dos dados e reconhecer diferenças entre indicadores e territórios.
 
 > **Os dados mostram padrões. A investigação procura compreender as razões.**
 
 ---
 
-## ⟐ REFLEXÃO FINAL
+## 7. REFLEXÃO FINAL
 
-Os resultados são de natureza observacional. O trabalho não tem como objetivo estabelecer relações causais além do que 
-os dados permitem observar.
-O projeto procura identificar sinais, padrões e questões que possam orientar análises futuras.
+Os resultados são de natureza observacional. O trabalho não tem como objetivo estabelecer relações causais para além do que os dados permitem observar.
 
----
-
-## ⌘ TECNOLOGIAS
-
-`Python` · `Pandas` · `NumPy` · `Matplotlib` · `Plotly` · `GeoPandas` · `Folium` · `Dash`
-
-### ⌘ Desenvolvimento
-
-`Python` · `Jupyter / Spyder`
-
-### ⌘ Visualização
-
-`Plotly` · `Matplotlib` · `Folium` · `Dash`
-
-### ⌘ Análise geográfica
-
-`GeoPandas` · `CAOP 2025`
+O projeto procura identificar sinais, padrões e questões que possam orientar análises futuras na área da saúde pública.
 
 ---
 
-## § FONTES
+## 8. TECNOLOGIAS
+
+**Programação e tratamento de dados:**  
+`Python` · `Pandas` · `NumPy`
+
+**Análise e visualização:**  
+`Matplotlib` · `Plotly` · `Dash`
+
+**Análise geográfica:**  
+`GeoPandas` · `Folium` · `CAOP 2025`
+
+**Ambiente de desenvolvimento:**  
+`Jupyter Notebook` · `Spyder`
+
+---
+
+## 9. FONTES
 
 - **Our World in Data** — dados de excesso de mortalidade e COVID-19  
   https://ourworldindata.org/explorers/covid
@@ -225,10 +215,17 @@ O projeto procura identificar sinais, padrões e questões que possam orientar a
 - **Direção-Geral do Território (DGT)** — CAOP 2025  
   https://www.dgterritorio.gov.pt/carta-administrativa-oficial-de-portugal-caop-2025
 
-  ---
-
-**◈ Projeto desenvolvido em Python · Portugal**
 ---
+
+---
+
+<p align="left">
+  <img src="project_visual_identity/ze_agulha.png" width="120" alt="Zé Agulinha">
+</p>
+
+<p align="left">
+  <strong>🧬 Projeto desenvolvido em Python · Portugal</strong>
+</p>
 
 <p align="left">
   <sub>
