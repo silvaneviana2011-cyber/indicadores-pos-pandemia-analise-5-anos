@@ -15,11 +15,6 @@ import pandas as pd
 import plotly.express as px
 from dash import Dash, html, dcc
 from pathlib import Path
-# ============================================================
-# Criar aplicação Dash
-# ============================================================
-app = Dash(__name__)
-server = app.server
 
 PASTA_PROJETO = Path(__file__).resolve().parent.parent
 PASTA_DADOS = PASTA_PROJETO / "03_dados_tratados"
